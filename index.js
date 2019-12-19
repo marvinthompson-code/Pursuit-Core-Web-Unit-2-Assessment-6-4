@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             })
             select.addEventListener("change", (e) => {
                 title.innerText = e.target.value
+                reviews.innerHTML = ""
                 films.forEach((film) => {
                     if (film.title == title.innerText) {
                         releaseYear.innerText = film.release_date
