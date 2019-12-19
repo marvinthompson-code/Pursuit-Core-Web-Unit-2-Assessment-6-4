@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./index.css">
     <title>Studio Ghibli!</title>
 </head>
 <body>
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="">
-    <h1>Ghibli Review App</h1>
-    <select name="" id="titleSelect">
-        <option value="0" disabled>Select a movie</option>
-    </select>
-    <div class="movieInfo"></div>
-    <form>
-        <input type="text" name="" id="userInput">
-        <input type="submit" name="" id="submit">
-    </form>
-    <ul id="submittedReviews"></ul>
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="">
+        <h1>Ghibli Review App</h1>
+    </div>
+    
+    <div class="main">
+        <select name="" id="titleSelect">
+            <option value="0" disabled selected>Select a movie</option>
+        </select>
+        <div id="movieInfo"></div>
+        <form>
+            <input type="text" name="" id="userInput">
+            <input type="submit" name="" id="submit">
+        </form>
+        <ul id="submittedReviews"></ul>
+    </div>
 </body>
 </html>
