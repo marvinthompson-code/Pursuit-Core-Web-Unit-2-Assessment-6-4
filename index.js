@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             })
             select.addEventListener("change", (e) => {
                 title.innerText = e.target.value
-                reviews.innerHTML = ""
                 films.forEach((film) => {
                     if (film.title == title.innerText) {
                         releaseYear.innerText = film.release_date
@@ -37,12 +36,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                         form.addEventListener("submit", (e) => {
                             e.preventDefault()
-                            // reviews.innerHTML = ""
+                            reviews.innerHTML = ""
                             let li = document.createElement("li")
                             li.innerText = `${film.title}: ${userInput.value}`
                             userInput.value = ""
                             reviews.appendChild(li)
                         })
+                        li.innerText = ""
                     }
                 })
             })
